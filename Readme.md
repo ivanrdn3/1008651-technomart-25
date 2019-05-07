@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Иван Родин](https://up.htmlacademy.ru/htmlcss/25/user/1008651).
-* Наставник: `Неизвестно`.
+* Наставник: [Елена Забара](https://htmlacademy.ru/profile/lena___elena).
 
 ---
 
