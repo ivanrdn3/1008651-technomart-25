@@ -8,9 +8,15 @@
   <body>
     <header class="header">
       <div class="top-menu">
-        <a href="index.html" class="main-page">ТЕХНОМАРТ</a>
-        <span  class="search">Поиск</span>
-        <!-- Form search -->
+        <a class="main-page">ТЕХНОМАРТ</a>
+        <p>
+          <form action="https://echo.htmlacademy.ru/" method="post">
+            <button type="submit" class="button-search">Поиск</button>
+            <label>
+              <input type="search" name="search" class="search" placeholder="Поиск:">
+            </label>
+          </form>
+        </p>
         <a href="#" class="bookmarks">Закладки</a>
         <a href="#" class="basket">Корзина</a>
         <a href="#" class="checkout">Оформить заказ</a>
@@ -19,7 +25,7 @@
       <div class="middle-memu">
         <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
         <p class="phone-contact">+7 (812) 555-05-55</p>
-        <p class="city-contact">г. Санкт-Петербург, ул. Б. Конюшенная, д.19.18</p>
+        <p class="city-contact">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
         <ul class="user-menu">
           <li class="login-in"><a href="#">Вход</a></li>
           <li class="check-in"><a href="#">Регистрация</a></li>
@@ -99,19 +105,28 @@
     </footer>
 
     <section class="modal modal-letter">
+      <form action="https://echo.htmlacademy.ru/" method="post">
         <h2 class="visually-hidden">Отправить письмо</h2>
-        <p>Ваше имя:</p>
-        <!-- Form -->
-        <p>Ваш e-mail:</p>
-        <!-- Form -->
-        <p>Текст письма:</p>
-        <!-- Form -->
-        <span class="modal-close">X</span>
+        <p class="name">
+          <label>Ваше имя:<input type="text" name="name" placeholder="Имя Фамилия"></label>
+        </p>
+        <p class="mail">
+          <label>Ваш e-mail:<input type="email" name="mail" placeholder="email@example.com"></label>
+        </p>
+        <p class="text">
+          <label>Текст письма:<textarea rows="5" cols="50" placeholder="В свободной форме"></textarea></label>
+        </p>
+        <input type="submit" name="send" value="Отправить">
+      </form>
+    <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-map">
-        <h2 class="visually-hidden">Как до нас добраться</h2>
-        <span class="modal-close">X</span>
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <p>
+        <img src="img/map.png" width="940" height="446" alt="Офис компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8">
+      </p>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>

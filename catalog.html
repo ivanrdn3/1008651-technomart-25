@@ -8,9 +8,15 @@
   <body>
     <header class="header">
       <div class="top-menu">
-        <a href="index.html" class="main-page">ТЕХНОМАРТ</a>
-        <span  class="search">Поиск</span>
-        <!-- Form search -->
+        <a class="main-page">ТЕХНОМАРТ</a>
+        <p>
+          <form action="https://echo.htmlacademy.ru/" method="post">
+            <button type="submit" class="button-search">Поиск</button>
+            <label>
+              <input type="search" name="search" class="search" placeholder="Поиск:">
+            </label>
+          </form>
+        </p>
         <a href="#" class="bookmarks">Закладки</a>
         <a href="#" class="basket">Корзина</a>
         <a href="#" class="checkout">Оформить заказ</a>
@@ -19,7 +25,7 @@
       <div class="middle-menu">
         <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
         <p class="phone-contact">+7 (812) 555-05-55</p>
-        <p class="city-contact">г. Санкт-Петербург, ул. Б. Конюшенная, д.19.18</p>
+        <p class="city-contact">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
         <ul class="user-menu-in">
           <li class="user"><a href="#">Равшан Джамшутович</a></li>
           <li><a href="#">Мои заказы</a></li>
@@ -50,6 +56,54 @@
           
           <h2 class="name-catalog">Перфораторы</h2>
 
+          <section class="filters">
+            <h2 class="visually-hidden">Фильтр товаров</h2>
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <!--Other filters-->
+
+              <fieldset>
+              <h3>ПРОИЗВОДИТЕЛИ:</h3>
+              <ul class="manufacturers-list">
+                  <li>
+                    <input type="checkbox" name="filter-bosch" id="bosch">
+                    <label for="bosch">BOSCH</label>
+                  </li>
+                  <li class="filter-option">
+                    <input type="checkbox" name="filter-interskol" id="interskol">
+                    <label for="interskol">ИНТЕРСКОЛ</label>
+                  </li>
+                  <li class="filter-option">
+                    <input type="checkbox" name="filter-makita" id="makita">
+                    <label for="makita">MAKITA</label>
+                  </li>
+                  <li class="filter-option">
+                    <input type="checkbox" name="filter-dewalt" id="dewalt">
+                    <label for="dewalt">DEWALT</label>
+                  </li>
+                  <li class="filter-option">
+                    <input type="checkbox" name="filter-hitachi" id="hitachi">
+                    <label for="hitachi">HITACHI</label>
+                  </li>
+                </ul>
+              </fieldset>
+
+              <fieldset>
+                <h3>ПИТАНИЕ:</h3>
+                <ul>
+                  <li class="filter-option">
+                    <input type="radio" name="filter-battery" id="battery">
+                    <label for="battery">АККУМУЛЯТОРНЫЕ</label>
+                  </li>
+                  <li class="filter-option">
+                    <input type="radio" name="filter-network" id="network">
+                    <label for="network">СЕТЕВЫЕ</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <button type="submit">Показать</button>
+            </form>
+          </section>
+          
           <section class="catalog-items">
               <h2 class="visually-hidden">Каталог товаров</h2>
               <article class="item">
@@ -175,5 +229,12 @@
           <p>Разработано - <a href="https://htmlacademy.ru/">htmlacademy.ru</a></p>
         </div>
       </footer>
+
+      <section class="modal modal-item">
+        <h2>Товар добавлен в корзину!</h2>
+        <button type="button">Оформить заказ</button>
+        <button type="button">Продолжить покупки</button>
+        <button class="modal-close" type="button">Закрыть</button>
+      </section>
   </body>
 </html>
