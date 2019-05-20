@@ -8,9 +8,11 @@
   <body>
     <header class="header">
       <div class="top-menu">
-        <a href="index.html" class="main-page">ТЕХНОМАРТ</a>
-        <span  class="search">Поиск</span>
-        <!-- Form search -->
+        <a class="main-page">ТЕХНОМАРТ</a>
+        <form action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="search">Форма поиска</label>
+          <input type="search" name="search" class="search" placeholder="Поиск:">
+        </form>
         <a href="#" class="bookmarks">Закладки</a>
         <a href="#" class="basket">Корзина</a>
         <a href="#" class="checkout">Оформить заказ</a>
@@ -19,7 +21,7 @@
       <div class="middle-memu">
         <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
         <p class="phone-contact">+7 (812) 555-05-55</p>
-        <p class="city-contact">г. Санкт-Петербург, ул. Б. Конюшенная, д.19.18</p>
+        <p class="city-contact">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
         <ul class="user-menu">
           <li class="login-in"><a href="#">Вход</a></li>
           <li class="check-in"><a href="#">Регистрация</a></li>
@@ -89,9 +91,9 @@
       <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2010-2017 Компания "Техномарт" Все права защищены</p>
           <ul class="button-social">
-            <li><a href="#" class="vk">Вконтакте</a></li>
-            <li><a href="#" class="fb">Фейсбук</a></li>
-            <li><a href="#" class="inst">Инстаграм</a></li>
+            <li><a href="#" class="vk"><span class="visually-hidden">Вконтакте</span></a></li>
+            <li><a href="#" class="fb"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li><a href="#" class="inst"><span class="visually-hidden">Инстаграм</span></a></li>
           </ul>
         <p class="feedback">Обратная связь: <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
         <p>Разработано - <a href="https://htmlacademy.ru/">htmlacademy.ru</a></p>
@@ -99,19 +101,28 @@
     </footer>
 
     <section class="modal modal-letter">
+      <form action="https://echo.htmlacademy.ru/" method="post">
         <h2 class="visually-hidden">Отправить письмо</h2>
-        <p>Ваше имя:</p>
-        <!-- Form -->
-        <p>Ваш e-mail:</p>
-        <!-- Form -->
-        <p>Текст письма:</p>
-        <!-- Form -->
-        <span class="modal-close">X</span>
+        <p class="name">
+          <label>Ваше имя:<input type="text" name="name" placeholder="Имя Фамилия"></label>
+        </p>
+        <p class="mail">
+          <label>Ваш e-mail:<input type="email" name="mail" placeholder="email@example.com"></label>
+        </p>
+        <p class="text">
+          <label>Текст письма:<textarea name="text-letter" rows="5" cols="50" placeholder="В свободной форме"></textarea></label>
+        </p>
+        <input type="submit" name="send" value="Отправить">
+      </form>
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
 
     <section class="modal modal-map">
-        <h2 class="visually-hidden">Как до нас добраться</h2>
-        <span class="modal-close">X</span>
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <p>
+        <img src="img/map.png" width="940" height="446" alt="Офис компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8">
+      </p>
+      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
   </body>
 </html>
