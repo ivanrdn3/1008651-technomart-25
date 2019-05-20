@@ -9,14 +9,11 @@
     <header class="header">
       <div class="top-menu">
         <a class="main-page">ТЕХНОМАРТ</a>
-        <p>
-          <form action="https://echo.htmlacademy.ru/" method="post">
-            <button type="submit" class="button-search">Поиск</button>
-            <label>
-              <input type="search" name="search" class="search" placeholder="Поиск:">
-            </label>
-          </form>
-        </p>
+        <form action="https://echo.htmlacademy.ru/" method="post">
+          <button type="submit" class="button-search">Поиск</button>
+          <label class="visually-hidden" for="search">Форма поиска</label>
+          <input type="search" name="search" class="search" placeholder="Поиск:">
+        </form>
         <a href="#" class="bookmarks">Закладки</a>
         <a href="#" class="basket">Корзина</a>
         <a href="#" class="checkout">Оформить заказ</a>
@@ -48,7 +45,7 @@
 
     <main class="main-container">
         <ul class="breadcrumbs">
-          <li><a href="index.html"><span>Home</span></a></li>
+          <li><a href="index.html"><span class="visually-hidden">Home</span></a></li>
           <li><a>Каталог</a></li>
           <li><a href="#">Инструмент</a></li>
           <li><a href="#">Перфораторы</a></li>
@@ -62,10 +59,10 @@
               <!--Other filters-->
 
               <fieldset>
-              <h3>ПРОИЗВОДИТЕЛИ:</h3>
+              <legend>ПРОИЗВОДИТЕЛИ:</legend>
               <ul class="manufacturers-list">
-                  <li>
-                    <input type="checkbox" name="filter-bosch" id="bosch">
+                  <li class="filter-option">
+                    <input type="checkbox" name="filter-bosch" id="bosch" checked>
                     <label for="bosch">BOSCH</label>
                   </li>
                   <li class="filter-option">
@@ -73,7 +70,7 @@
                     <label for="interskol">ИНТЕРСКОЛ</label>
                   </li>
                   <li class="filter-option">
-                    <input type="checkbox" name="filter-makita" id="makita">
+                    <input type="checkbox" name="filter-makita" id="makita" checked>
                     <label for="makita">MAKITA</label>
                   </li>
                   <li class="filter-option">
@@ -88,19 +85,19 @@
               </fieldset>
 
               <fieldset>
-                <h3>ПИТАНИЕ:</h3>
+                <legend>ПИТАНИЕ:</legend>
                 <ul>
                   <li class="filter-option">
-                    <input type="radio" name="filter-battery" id="battery">
+                    <input type="radio" name="filter" id="battery" checked>
                     <label for="battery">АККУМУЛЯТОРНЫЕ</label>
                   </li>
                   <li class="filter-option">
-                    <input type="radio" name="filter-network" id="network">
+                    <input type="radio" name="filter" id="network">
                     <label for="network">СЕТЕВЫЕ</label>
                   </li>
                 </ul>
               </fieldset>
-              <button type="submit">Показать</button>
+              <button type="submit" class="filter-button">Показать</button>
             </form>
           </section>
           
@@ -221,9 +218,9 @@
         <div class="footer-bottom">
           <p class="footer-copyright">&copy; 2010-2017 Компания "Техномарт" Все права защищены</p>
             <ul class="button-social">
-              <li><a href="#" class="vk">Вконтакте</a></li>
-              <li><a href="#" class="fb">Фейсбук</a></li>
-              <li><a href="#" class="inst">Инстаграм</a></li>
+              <li><a href="#" class="vk"><span class="visually-hidden">Вконтакте</span></a></li>
+              <li><a href="#" class="fb"><span class="visually-hidden">Фейсбук</span></a></li>
+              <li><a href="#" class="inst"><span class="visually-hidden">Инстаграм</span></a></li>
             </ul>
           <p class="feedback">Обратная связь: <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
           <p>Разработано - <a href="https://htmlacademy.ru/">htmlacademy.ru</a></p>
@@ -234,7 +231,7 @@
         <h2>Товар добавлен в корзину!</h2>
         <button type="button">Оформить заказ</button>
         <button type="button">Продолжить покупки</button>
-        <button class="modal-close" type="button">Закрыть</button>
+        <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
       </section>
   </body>
 </html>
