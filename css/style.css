@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -106,6 +114,8 @@ a {
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
+  
+  border: 3px solid white;
 }
 
 .city-contact {
@@ -173,12 +183,23 @@ a {
   color: rgb(0,0,0, 0.3);
 }
 
+.user-menu-in ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
 .main-navigation li {
   font-size: 17px;
   line-height: 17px;
   list-style: none;
   color: #ffffff;
   background-color: #32425c;
+}
+
+.main-navigation ul {
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .main-navigation a:hover {
@@ -314,4 +335,168 @@ a {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/* СЕТКА */
+
+.top-menu {
+  width: 100%;
+  min-height: 40px;
+  margin-bottom: 55px;
+}
+
+.container {
+  width: 960px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.top-menu-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-left {
+  width: 460px;
+  display: flex;
+}
+
+.flex-right {
+  width: 460px;
+  display: flex;
+}
+
+.main-page {
+  width: 220px;
+  min-height: 40px;
+  margin-right: 10px;
+
+  text-align: center;
+}
+
+input[type="search"] {
+  width: 220px;
+  min-height: 40px;
+}
+
+.flex-right {
+  width: 460px;
+  display: flex;
+}
+
+.bookmarks,
+.basket,
+.checkout {
+  width: 150px;
+  min-height: 40px;
+}
+
+.middle {
+  display: flex;
+  margin-left: 60px;
+}
+
+.title {
+  width: 200px;
+  margin-right: 70px;
+}
+
+.middle-memu {
+  margin-bottom: 40px; 
+}
+
+.user-menu {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-navigation {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.site-navigation {
+  display: flex;
+  justify-content: space-around;
+
+  background-color: #32425c;
+}
+
+.site-navigation li {
+  min-height: 60px;
+}
+
+.header {
+  margin-bottom: 80px;
+}
+
+.main-container {
+  width: 960px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.information {
+  display: flex;
+}
+
+.about-company {
+  width: 540px;
+
+  margin-right: 100px;
+}
+
+.transport-company {
+  width: 300px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-footer-left {
+  width: 380px;
+  margin-right: 10px;
+}
+
+.flex-footer-right {
+  width: 550px;
+
+  justify-content: flex-end;
+}
+
+.footer-menu,
+.shop-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-menu li,
+.shop-list li {
+  margin-right: 5px;
+}
+
+.footer-menu li:last-child,
+.shop-list li:last-child {
+  margin-right: 0;
+}
+
+.flex-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-footer-bottom-left {
+  width: 300px;
+}
+
+.flex-footer-bottom-center {
+  width: 160px;
+}
+
+.flex-footer-bottom-rigth {
+  width: 300px;
 }
