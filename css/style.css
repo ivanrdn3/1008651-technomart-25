@@ -526,8 +526,7 @@ input[type="search"] {
   color: #ffffff;
 }
 
-.products-popular,
-.generators-popular {
+.popular {
   background-color: #f9f5f0;
 
   display: flex;
@@ -547,10 +546,14 @@ input[type="search"] {
   margin-bottom: 20px;
 }
 
-.generator-logo {
+.generator-logo ul{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .generator-logo a {
@@ -567,6 +570,8 @@ input[type="search"] {
 .handling-list {
   list-style: none;
   margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 }
 
@@ -673,9 +678,21 @@ input[type="search"] {
   margin-bottom: 60px;
 }
 
+.page-number ul{
+  display: flex;
+
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.page-number li {
+  margin-right: 10px;
+}
+
 .main-bottom {
   padding-top: 70px;
-  margin-bottom: 70px;
+  padding-bottom: 75px;
 
   background-color: #f2f6f8;
 }
@@ -690,4 +707,76 @@ input[type="search"] {
 .about-perforator-text {
   font-size: 13px;
   line-height: 24px;
+}
+
+/* Slider-main */
+.slaid {
+  position: relative;
+}
+
+.slaid input[type="radio"] {
+  display: none;
+}
+
+.slider-inner {
+  overflow: hidden;
+}
+
+.slider-slides {
+  width: 200%;
+  transition: transform 0.8s ease;
+}
+
+.slider-slides .sliderx {
+  float: left;
+  width: 620px;
+  height: 266px;
+}
+
+.slider-controls {
+  position: absolute;
+  z-index: 1;
+
+  margin-top: 215px;
+  margin-left: 295px;
+
+}
+
+.slider-controls label {
+  display: inline-block;
+  margin: 0 2.5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white; 
+  border: 2px solid white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"] {
+  background-color: #ee3643;
+}
+
+
+#btn-1:checked ~ .slider-inner .slider-slides {
+  transform: translate(0);
+}
+
+#btn-2:checked ~ .slider-inner .slider-slides {
+  transform: translate(-620px);
+}
+
+.handling-top {
+  margin-bottom: 75px;
+}
+
+.handling-list {
+  width: 240px;
+  margin-right: 80px;
+}
+
+.slide-handling {
+  width: 630px;
 }
