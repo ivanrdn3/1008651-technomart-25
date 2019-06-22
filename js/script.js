@@ -14,8 +14,8 @@
         });
 
         window.addEventListener("keydown", function (evt) {
-          evt.preventDefault();
           if (evt.keyCode === 27) {
+            evt.preventDefault();
             if (itemPopup.classList.contains("modal-show-item")) {
               itemPopup.classList.remove("modal-show-item");
             }
@@ -99,8 +99,8 @@
       });
 
       window.addEventListener("keydown", function (evt) {
-        evt.preventDefault();
         if (evt.keyCode === 27) {
+          evt.preventDefault();
           if (mapPopup.classList.contains("modal-show-map")) {
             mapPopup.classList.remove("modal-show-map");
           }

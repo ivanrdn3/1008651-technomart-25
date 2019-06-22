@@ -182,6 +182,7 @@ a {
 
   width: 19px;
   height: 19px;
+  
   background-image: url("../img/icon-phone.svg");
 
   left: 12px;
@@ -1098,6 +1099,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   font-size: 13px;
   line-height: 18px;
@@ -1118,6 +1121,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   margin: 0;
   padding: 0;
@@ -1163,20 +1168,20 @@ a {
   border: none;
 }
 
-.sorting-list li:nth-of-type(4) a,
-.sorting-list li:nth-of-type(5) a {
+.sorting-list .sort-up,
+.sorting-list .sort-down {
   border: none;
 }
 
-.sorting-list li:nth-of-type(4) a:hover path,
-.sorting-list li:nth-of-type(5) a:hover path {
+.sorting-list .sort-up:hover path,
+.sorting-list .sort-down:hover path {
   fill: rgba(0,0,0, 1);
 }
 
-.sorting-list li:nth-of-type(4) a:focus path,
-.sorting-list li:nth-of-type(4) a:active path,
-.sorting-list li:nth-of-type(5) a:focus path,
-.sorting-list li:nth-of-type(5) a:active path {
+.sorting-list .sort-up:focus path,
+.sorting-list .sort-up:active path,
+.sorting-list .sort-down:focus path,
+.sorting-list .sort-down:active path {
   fill: #ee3643;
 }
 
@@ -1255,25 +1260,31 @@ a {
 }
 
 .slider-slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 200%;
   -webkit-transition: -webkit-transform 0.8s ease;
   transition: -webkit-transform 0.8s ease;
   -o-transition: transform 0.8s ease;
   transition: transform 0.8s ease;
   transition: transform 0.8s ease, -webkit-transform 0.8s ease;
+
+  background-color: #32425c;
 }
 
 .slider-slides .sliderx {
-  float: left;
   width: 620px;
   min-height: 266px;
 }
 
 .slider-slides .sliderx:first-child {
+  background-color: #32425c;
   background-image: url("../img/slide-first.jpg")
 }
 
 .slider-slides .sliderx:last-child {
+  background-color: #32425c;
   background-image: url("../img/slide-second.jpg")
 }
 
@@ -1285,7 +1296,7 @@ a {
   font-family: "Cuprum", Arial, sans-serif;
 }
 
-.slider-slides .sliderx h3 {
+.sliderx .name-slide {
   font-size: 36px;
   line-height: 36px;
 
@@ -1295,7 +1306,7 @@ a {
   margin-top: 23px;
 }
 
-.slider-slides .sliderx p {
+.sliderx .text-slide {
   font-size: 18px;
   line-height: 24px;
 
@@ -1416,6 +1427,7 @@ a {
 .slide-handling .deliverys {
   min-height: 282px;
 
+  background-color: #f5f8fa;
   background-image: url("../img/car.png");
   background-repeat: no-repeat;
   background-position: 151px  24px;
@@ -1428,6 +1440,7 @@ a {
 .slide-handling .guarantee {
   min-height: 282px;
 
+  background-color: #f5f8fa;
   background-image: url("../img/medal.png"); 
   background-repeat: no-repeat;
   background-position: 100%  0;
@@ -1440,6 +1453,7 @@ a {
 .slide-handling .credit {
   min-height: 282px;
 
+  background-color: #f5f8fa;
   background-image: url("../img/credit.png"); 
   background-repeat: no-repeat;
   background-position: 100%  0;
@@ -1742,8 +1756,8 @@ a {
   z-index: 10;
 }
 
-.item .actions .buy,
-.item .actions .bookmark {
+.actions .buy,
+.actions .bookmark {
   position: relative;
   display: block;
   width: 129px;
@@ -1804,26 +1818,26 @@ a {
   display: block;
 }
 
-.item .actions .buy:hover {
+.actions .buy:hover {
   background-color: #5fbb2d;
   border: 3px solid #5fbb2d;
   border-bottom-color: #367315;
 }
 
-.item .actions .buy:focus,
-.item .actions .buy:active {
+.actions .buy:focus,
+.actions .buy:active {
   background-color: #367315;
   border: 3px solid #367315;
   border-bottom-color: #367315;
 }
 
-.item .actions .bookmark:hover {
+.actions .bookmark:hover {
   background: white;
   border-color: #32425c;
 }
 
-.item .actions .bookmark:focus,
-.item .actions .bookmark:active {
+.actions .bookmark:focus,
+.actions .bookmark:active {
   background: white;
   border-color: rgba(50, 66, 92, 0.3);
   color: rgba(50, 66, 92, 0.3);
@@ -2391,37 +2405,37 @@ a {
 
 .input-range input[type="text"]::-webkit-input-placeholder {
   font-size: 17px;
-  line-height: 18px;
   text-transform: uppercase;
   color: #000000;
   text-align: center;
+  vertical-align: middle;
   opacity: 1;
 }
 
 .input-range input[type="text"]:-ms-input-placeholder {
   font-size: 17px;
-  line-height: 18px;
   text-transform: uppercase;
   color: #000000;
   text-align: center;
+  vertical-align: middle;
   opacity: 1;
 }
 
 .input-range input[type="text"]::-ms-input-placeholder {
   font-size: 17px;
-  line-height: 18px;
   text-transform: uppercase;
   color: #000000;
   text-align: center;
+  vertical-align: middle;
   opacity: 1;
 }
 
 .input-range input[type="text"]::placeholder {
   font-size: 17px;
-  line-height: 18px;
   text-transform: uppercase;
   color: #000000;
   text-align: center;
+  vertical-align: middle;
   opacity: 1;
 }
 
@@ -2518,7 +2532,9 @@ a {
 .modal-show-letter {
   display: block;
 
-  animation: bounce 0.6s;
+  -webkit-animation: bounce 0.6s;
+
+          animation: bounce 0.6s;
 }
 
 .modal input,
@@ -2526,9 +2542,23 @@ a {
   background-color: #ffffff;
   
   border-width: 2px;
-  border-color: #dee3e4;
+  border-color: #d7dcde;
   border-style: solid;
   border-radius: 4px;
+
+  outline: none;
+}
+
+.modal input:hover,
+.modal textarea:hover {
+  border-color: #b5b5b5;
+}
+
+.modal input:active,
+.modal input:focus,
+.modal textarea:focus,
+.modal textarea:active {
+  border-color: #ee3643;
 }
 
 .modal-letter input {
@@ -2652,7 +2682,7 @@ a {
 
   display: none;
   width: 940px;
-  min-height: 446px;
+  height: 446px;
   margin-top: -223px;
   margin-left: -470px;
 
@@ -2664,7 +2694,9 @@ a {
 .modal-show-map {
   display: block;
 
-  animation: bounce 0.6s;
+  -webkit-animation: bounce 0.6s;
+
+          animation: bounce 0.6s;
 }
 
 .modal-map .modal-close::before,
@@ -2874,17 +2906,17 @@ a {
   z-index: 30;
 }
 
-.modal-item .button:nth-of-type(2) {
+.modal-item button {
   color: #000000;
   background-color: #ffffff;
 }
 
-.modal-item .button:nth-of-type(2):hover {
+.modal-item button:hover {
   background-color: rgba(255,255,255, 0.4);
 }
 
-.modal-item .button:nth-of-type(2):focus,
-.modal-item .button:nth-of-type(2):active {
+.modal-item button:focus,
+.modal-item button:active {
   color: rgba(0,0,0, 0.3);
   background-color: rgba(255,255,255, 0.2);
 }
@@ -2894,7 +2926,9 @@ a {
   display: -ms-flexbox;
   display: flex;
 
-  animation: bounce 0.6s;
+  -webkit-animation: bounce 0.6s;
+
+          animation: bounce 0.6s;
 }
 
 .visually-hidden {
@@ -2908,28 +2942,55 @@ a {
   overflow: hidden;
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0% {
-    transform: translateY(-2000px);
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
   }
 
   70% {
-    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
   }
 
   90% {
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
 
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
-@keyframes shake {
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 
   10%,
@@ -2937,17 +2998,45 @@ a {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
 }
 
 .modal-error {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
