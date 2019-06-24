@@ -626,7 +626,7 @@ a {
   min-height: 63px;
   
   padding-top: 21px;
-  margin-bottom: 28px;
+  margin-bottom: 34px;
 }
 
 .form-search input[type="search"] {
@@ -1234,13 +1234,20 @@ a {
   text-transform: uppercase;
 }
 
-.about-perforator-text {
+.main-bottom p {
   padding: 0;
   margin: 0;
-
-  margin-top: 26px;
+  
   font-size: 13px;
   line-height: 24px;
+}
+
+.main-bottom p:nth-of-type(1) {
+  margin-top: 26px;
+}
+
+.main-bottom p:nth-of-type(2) {
+  letter-spacing: 0.11px;
 }
 
 .slide {
